@@ -3,7 +3,7 @@ import axios from "axios";
 export default class EditorasApi {
   async buscarTodasAsEditoras() {
     const { data } = await axios.get("/editoras/");
-    return data.results;
+    return data;
   }
   async adicionarEditora(editora) {
     const { data } = await axios.post("/editoras/", editora);
